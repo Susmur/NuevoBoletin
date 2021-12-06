@@ -19,10 +19,11 @@ determina.
         while (respuesta == 's' || respuesta == 'S') {
             do {
                 pintarMenu();
+                leerCaracter();
             }while (leerDatos()==0);
 
             System.out.println("¿Quiere volver a probar?");
-            leerCaracter();
+
         }
 
     }
