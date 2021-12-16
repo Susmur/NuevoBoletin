@@ -13,19 +13,22 @@ determina.
     public static void main(String[] args) {
 
         char respuesta;
-
-        System.out.println("¿Desea conocer la longitud, el area o el volumen de uan esfera?");
+        
+    try {
+        System.out.println("¿Desea conocer la longitud, el area o el volumen de una esfera?");
         respuesta = leerCaracter();
         while (respuesta == 's' || respuesta == 'S') {
             do {
                 pintarMenu();
                 leerCaracter();
-            }while (leerDatos()==0);
+            } while (leerDatos() == 0);
 
             System.out.println("¿Quiere volver a probar?");
 
         }
-
+    } catch (Exception e) {
+        System.out.println(e);
+    }
     }
 
     public static char leerCaracter() {
