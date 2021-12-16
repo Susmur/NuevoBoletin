@@ -8,21 +8,25 @@ public class Boletin16_12_2021Ejercicio2 {
 
         // declaracion de variables
         int numeroMayor=0;
-        int numeroMenor=999999999;
+        int numeroMenor=0;
         int numeroLeido;
-        int contador;
-        int suma;
-
+        int contador=0;
+        int suma=0;
+        float media=0;
 
         do {
             numeroLeido=leerNumero();
             numeroMayor=comparaMayor(numeroLeido,numeroMayor);
             numeroMenor=comparaMenor(numeroLeido,numeroMenor);
-
+            contador++;
+            suma=suma+numeroLeido;
 
 
         }while(numeroLeido!=0);
-
+        System.out.println("El mayor de los numeros introducidos es: " + numeroMayor);
+        System.out.println("El menor es: " + numeroMenor);
+        System.out.println("La cantidad de numeros introducidos es: " + contador);
+        System.out.println("La media de todos ellos es: " + hallarMedia(contador,suma));
     }
 
     /**
@@ -45,10 +49,11 @@ número menor.
 
     /**
      * precondicion
-     * postcondicion
+     * postcondicion salida de la media de los datos introducidos
      * @param contador
      * @param suma
-     * @return
+     * @return devuelve el resultado de la media entre la suma total y la cantidad de veces
+     * que se ha introducido los numeros
      */
     public static float hallarMedia(int contador, int suma){
 
@@ -60,6 +65,13 @@ número menor.
         return media;
     }
 
+    /**
+     * precondicion:
+     * porstondicion: salida por consola de el numero mas alto de los numeros dados
+     * @param numeroLeido
+     * @param numeroMayor
+     * @return devuelve el valor mas alto introducido por consola
+     */
     public static int comparaMayor(int numeroLeido, int numeroMayor ){
 
 
@@ -70,11 +82,13 @@ número menor.
     }
 
     /**
-     *
-     * @param
-     * @param
-     * @return
-     */
+     * prondicion:
+     * postcondicion: devuelve 0 siempre, ya que es la condicion de salida y lo almacena, ya que tenemos puesto que el menor sea
+     * igual o mayor que 0, por lo tanto siempre sera 0.
+     * @param numeroLeido
+     * @param  numeroMenor
+     * @return devuelve el menor de los numero introducidos
+     **/
     public static int comparaMenor(int numeroLeido, int numeroMenor) {
 
         if (numeroLeido < numeroMenor) {
