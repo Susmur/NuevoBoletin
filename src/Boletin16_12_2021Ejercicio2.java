@@ -8,18 +8,18 @@ public class Boletin16_12_2021Ejercicio2 {
 
         // declaracion de variables
         int numeroMayor=0;
-        int numeroMenor=0;
+        int numeroMenor;
         int numeroLeido;
         int contador=0;
         int suma=0;
-        float media=0;
-
+        numeroLeido=leerNumero();
+        numeroMenor=numeroLeido;
         do {
-            numeroLeido=leerNumero();
+            contador++;
             numeroMayor=comparaMayor(numeroLeido,numeroMayor);
             numeroMenor=comparaMenor(numeroLeido,numeroMenor);
-            contador++;
             suma=suma+numeroLeido;
+            numeroLeido=leerNumero();
 
 
         }while(numeroLeido!=0);

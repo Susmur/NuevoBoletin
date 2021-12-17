@@ -53,10 +53,15 @@ válidos para N o M se mostrará el mensaje correspondiente y se vuelven a pedir
     public static void hallarMultiplo(int numeroMultiplo, int numeroMaximo){
 
 
-        for (int i=0; i<=numeroMaximo;i+=numeroMultiplo){
+        System.out.println("Los multiplos de "+ numeroMultiplo + " desde 1 hasta: "+ numeroMaximo +" es ");
+        for (int i=1; i<=numeroMaximo;i++){
 
+                if (i%numeroMultiplo==0){
 
-            System.out.println(i);
+                    System.out.println(i);
+
+                }
+
         }
 
 
